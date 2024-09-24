@@ -43,3 +43,24 @@ char StoreUntilSpace(const char *input) {
 
   return firstWord;
 }
+
+void ExtractValueInBrackets(const char *input, char *output) {
+  int i = 0, j = 0;
+  int len = strlen(input);
+
+  // Traverse to find the opening '('
+  while (i < len && input[i] != '(') {
+    i++;
+  }
+
+  // If opening '(' found, find the closing ')'
+  if (i < len && input[i] == '(') {
+    i++; // Move past '('
+    while (i < len && input[i] != ')') {
+      output[j++] = input[i++];
+    }
+  }
+
+  // Null terminate the output string
+  output[j] = '\0';
+}
