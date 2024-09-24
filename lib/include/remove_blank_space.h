@@ -5,6 +5,8 @@ void RemoveSpace(char *input) {}
 
 void RemoveLeadingSpaces(char *input) {}
 
-char StoreUntilSpace(char *input) {}
+char StoreUntilSpace(const char *input) {}
+
+char ExtractValueInBrackets(const char *input) {}
 
 #endif
