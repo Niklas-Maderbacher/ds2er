@@ -3,10 +3,10 @@
 
 #include "./db_column_struct.h"
 
-typedef struct DBTableSingleLinkedList {
+typedef struct DBTableSingleLinkedListNode {
   char table_name;
-  struct DBColumnSingleLinkedList *columns;
-  struct DBTableSingleLinkedList *next_struct;
-} DBTableSingleLinkedList;
+  struct DBColumnSingleLinkedListNode *columns;
+  struct DBTableSingleLinkedListNode *previous_struct;
+} DBTableSingleLinkedListNode;
 
 #endif

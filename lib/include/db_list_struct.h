@@ -3,9 +3,9 @@
 
 #include "./db_table_struct.h"
 
-typedef struct DBSingleLinkedList {
-  struct DBTableSingleLinkedList *tables;
-  struct DBSingleLinkedList *next_struct;
-} DBSingleLinkedList;
+typedef struct DBSingleLinkedListNode {
+  struct DBTableSingleLinkedListNode *table;
+  struct DBSingleLinkedListNode *previous_struct;
+} DBSingleLinkedListNode;
 
 #endif
