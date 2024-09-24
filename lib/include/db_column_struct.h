@@ -4,7 +4,7 @@
 typedef struct DBColumnSingleLinkedListNode {
   char column_name;
   char column_type;
-  struct DBColumnSingleLinkedListNode *previous_struct;
+  struct DBColumnSingleLinkedListNode *previous_node;
 } DBColumnSingleLinkedListNode;
 
 #endif

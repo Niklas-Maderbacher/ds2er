@@ -5,7 +5,7 @@
 
 typedef struct DBSingleLinkedListNode {
   struct DBTableSingleLinkedListNode *table;
-  struct DBSingleLinkedListNode *previous_struct;
+  struct DBSingleLinkedListNode *previous_node;
 } DBSingleLinkedListNode;
 
 #endif

@@ -6,7 +6,7 @@
 typedef struct DBTableSingleLinkedListNode {
   char table_name;
   struct DBColumnSingleLinkedListNode *columns;
-  struct DBTableSingleLinkedListNode *previous_struct;
+  struct DBTableSingleLinkedListNode *previous_node;
 } DBTableSingleLinkedListNode;
 
 #endif
