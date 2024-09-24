@@ -21,7 +21,7 @@ void close_file(const FILE *file) {}
 
 /// @brief extract documentation from python file
 /// @param py_file (FILE*) python file
-/// @return SingleLinkedList including all tables and columns
-struct DBSingleLinkedList extract_documentation_py(const FILE *py_file) {}
+/// @return SingleLinkedList including all tables with columns
+struct DBSingleLinkedListNode extract_documentation_py(const FILE *py_file) {}
 
 #endif
