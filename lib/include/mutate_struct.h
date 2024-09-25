@@ -11,15 +11,15 @@ void *select_previous_node(void *node, GetPreviousNodeFunc get_previous_node) {
   return get_previous_node(node);
 }
 
-DBColumnSingleLinkedListNode *data_node(void *node) {
+void *prev_data_node(void *node) {
   return ((struct DBColumnSingleLinkedListNode *)node)->previous_node;
 }
 
-DBSingleLinkedListNode *table_node(void *node) {
+void *prev_table_node(void *node) {
   return ((struct DBSingleLinkedListNode *)node)->previous_node;
 }
 
-DBTableSingleLinkedListNode *col_node(void *node) {
+void *prev_col_node(void *node) {
   return ((struct DBTableSingleLinkedListNode *)node)->previous_node;
 }
 
