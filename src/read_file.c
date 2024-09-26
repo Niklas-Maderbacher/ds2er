@@ -19,13 +19,13 @@ extract_documentation_py(const FILE *py_file) {
   bool cur_line_at_cols = false;
   // create node pointer instances for
   // all table nodes
-  DBSingleLinkedListNode *cur_db_data_node;
+  // DBSingleLinkedListNode *cur_db_data_node;
   DBTableSingleLinkedListNode *cur_table_node;
   DBColumnSingleLinkedListNode *cur_col_node;
 
   // set last node pointers to NULL
   // because first node can not have a previous node
-  cur_db_data_node->previous_node = NULL;
+  // cur_db_data_node->previous_node = NULL;
   cur_table_node->previous_node = NULL;
   cur_col_node->previous_node = NULL;
 
@@ -45,9 +45,9 @@ extract_documentation_py(const FILE *py_file) {
       table_name_saved = false;
 
       // set table node in db data node
-      cur_db_data_node->table_node = cur_table_node;
+      // cur_db_data_node->table_node = cur_table_node;
       cur_table_node = CreateNewNode(cur_table_node, new_table_node);
-      cur_db_data_node = CreateNewNode(cur_db_data_node, new_data_node);
+      // cur_db_data_node = CreateNewNode(cur_db_data_node, new_data_node);
 
       /*
       // create new node

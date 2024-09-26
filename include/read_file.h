@@ -6,7 +6,7 @@
 #include <string.h>
 
 #include "db_column_struct.h"
-#include "db_list_struct.h"
+// #include "db_list_struct.h"
 #include "db_table_struct.h"
 #include "func_typedef.h"
 #include "remove_blank_space.h"
