@@ -8,7 +8,16 @@
 #include "db_column_struct.h"
 #include "db_list_struct.h"
 #include "db_table_struct.h"
+#include "func_typedef.h"
 #include "remove_blank_space.h"
+
+const CreateNewNodeFunc new_col_node;
+const CreateNewNodeFunc new_data_node;
+const CreateNewNodeFunc new_table_node;
+
+const GetPreviousNodeFunc prev_col_node;
+const GetPreviousNodeFunc prev_data_node;
+const GetPreviousNodeFunc prev_table_node;
 
 /// @brief reads entire file and returns it as FILE pointer variable
 /// @param filepath (const char*) path to file
