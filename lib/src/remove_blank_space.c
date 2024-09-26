@@ -1,36 +1,17 @@
 #include "remove_blank_space.h"
 
-void RemoveSpace(char *input) {
-  int i, j = 0;
-  int len = strlen(input); // Get the length of the input string
-
-  // Iterate through each character in the input string
-  for (i = 0; i < len; i++) {
-    if (input[i] != ' ') {   // If the character is not a space
-      input[j++] = input[i]; // Copy it to the next position
-    }
-  }
-  input[j] = '\0'; // Null-terminate the modified string
-}
-
-void RemoveLeadingSpaces(char *input) {
-  int i = 0, j = 0;
+char *RemoveLeadingSpaces(char *input) {
+  int i = 0;
 
   // Skip leading spaces
   while (input[i] == ' ') {
     i++;
   }
 
-  // Shift the rest of the string to the left
-  while (input[i] != '\0') {
-    input[j++] = input[i++];
-  }
-
-  // Null-terminate the new string
-  input[j] = '\0';
+  return &(input[i]);
 }
 
-char StoreUntilSpace(const char *input) {
+char *StoreUntilSpace(const char *input) {
   char firstWord[256];
   int i = 0;
   // Iterate through input and copy characters into firstWord until a space is
@@ -41,10 +22,10 @@ char StoreUntilSpace(const char *input) {
   }
   firstWord[i] = '\0'; // Null-terminate the firstWord string
 
-  return firstWord;
+  return &firstWord;
 }
 
-char ExtractValueInBrackets(const char *input) {
+char *ExtractValueInBrackets(const char *input) {
   int i = 0, j = 0;
   int len = strlen(input);
   char output[256];
@@ -65,5 +46,5 @@ char ExtractValueInBrackets(const char *input) {
   // Null terminate the output string
   output[j] = '\0';
 
-  return output;
+  return &output;
 }

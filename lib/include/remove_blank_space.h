@@ -1,12 +1,13 @@
 #ifndef REMOVE_BLANK_SPACE_H
 #define REMOVE_BLANK_SPACE_H
 
-void RemoveSpace(char *input);
+#include <stdlib.h>
+#include <string.h>
 
-void RemoveLeadingSpaces(char *input);
+char *RemoveLeadingSpaces(char *input);
 
-char StoreUntilSpace(const char *input);
+char *StoreUntilSpace(const char *input);
 
-char ExtractValueInBrackets(const char *input);
+char *ExtractValueInBrackets(const char *input);
 
 #endif

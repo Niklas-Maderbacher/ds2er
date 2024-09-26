@@ -4,7 +4,7 @@
 #include "./db_column_struct.h"
 
 typedef struct DBTableSingleLinkedListNode {
-  char table_name;
+  char *table_name;
   struct DBColumnSingleLinkedListNode *columns;
   struct DBTableSingleLinkedListNode *previous_node;
 } DBTableSingleLinkedListNode;

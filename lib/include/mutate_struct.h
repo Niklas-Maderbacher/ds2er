@@ -45,20 +45,17 @@ void *prev_table_node(void *node) {
 void *prev_col_node(void *node) {
   return ((DBColumnSingleLinkedListNode *)node)->previous_node;
 }
-
+/*
 void *CreateNewNode(void *node, CreateNewNodeFunc get_new_node) {
   return get_new_node(node);
 }
 
-/*
 void *new_data_node(void *node) {
   DBSingleLinkedListNode *new_node;
   new_node->previous_node = ((DBSingleLinkedListNode *)node);
   return node;
 }
-*/
 
-/*
 void *new_data_node(void *node) {
     // Allocate memory for the new node
     DBSingleLinkedListNode *new_node = (DBSingleLinkedListNode
@@ -75,7 +72,6 @@ void *new_data_node(void *node) {
     // Return the newly created node
     return new_node;
 }
-*/
 
 void *new_table_node(void *node) {
   DBTableSingleLinkedListNode *new_node;
@@ -88,5 +84,6 @@ void *new_col_node(void *node) {
   new_node->previous_node = ((DBColumnSingleLinkedListNode *)node);
   return node;
 }
+*/
 
 #endif
