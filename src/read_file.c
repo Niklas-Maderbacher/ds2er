@@ -4,7 +4,8 @@ FILE *read_file(const char *filepath) { return fopen(filepath, "r"); }
 
 void close_file(const FILE *file) { fclose(file); }
 
-struct DBSingleLinkedListNode extract_documentation_py(const FILE *py_file) {
+struct DBTableSingleLinkedListNode
+extract_documentation_py(const FILE *py_file) {
   // set new variable, that stores data of current line in it
   char buffer[256];
   // set new variables for checks

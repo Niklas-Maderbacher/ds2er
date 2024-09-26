@@ -2,7 +2,7 @@
 #define MUTATE_STRUCT_H
 
 #include "./db_column_struct.h"
-#include "./db_list_struct.h"
+// #include "./db_list_struct.h"
 #include "./db_table_struct.h"
 #include "./func_typedef.h"
 
@@ -10,9 +10,11 @@ void *SelectPreviousNode(void *node, GetPreviousNodeFunc get_previous_node) {
   return get_previous_node(node);
 }
 
+/*
 void *prev_data_node(void *node) {
   return ((DBColumnSingleLinkedListNode *)node)->previous_node;
 }
+*/
 
 /*
 void *prev_data_node(void *node) {
@@ -37,22 +39,24 @@ void *prev_data_node(void *node) {
 */
 
 void *prev_table_node(void *node) {
-  return ((DBSingleLinkedListNode *)node)->previous_node;
+  return ((DBTableSingleLinkedListNode *)node)->previous_node;
 }
 
 void *prev_col_node(void *node) {
-  return ((DBTableSingleLinkedListNode *)node)->previous_node;
+  return ((DBColumnSingleLinkedListNode *)node)->previous_node;
 }
 
 void *CreateNewNode(void *node, CreateNewNodeFunc get_new_node) {
   return get_new_node(node);
 }
 
+/*
 void *new_data_node(void *node) {
   DBSingleLinkedListNode *new_node;
   new_node->previous_node = ((DBSingleLinkedListNode *)node);
   return node;
 }
+*/
 
 /*
 void *new_data_node(void *node) {

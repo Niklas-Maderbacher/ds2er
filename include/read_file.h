@@ -12,11 +12,11 @@
 #include "remove_blank_space.h"
 
 const CreateNewNodeFunc new_col_node;
-const CreateNewNodeFunc new_data_node;
+// const CreateNewNodeFunc new_data_node;
 const CreateNewNodeFunc new_table_node;
 
 const GetPreviousNodeFunc prev_col_node;
-const GetPreviousNodeFunc prev_data_node;
+// const GetPreviousNodeFunc prev_data_node;
 const GetPreviousNodeFunc prev_table_node;
 
 /// @brief reads entire file and returns it as FILE pointer variable
@@ -31,6 +31,7 @@ void close_file(const FILE *file) {}
 /// @brief extract documentation from python file
 /// @param py_file (FILE*) python file
 /// @return SingleLinkedList including all tables with columns
-struct DBSingleLinkedListNode extract_documentation_py(const FILE *py_file) {}
+struct DBTableSingleLinkedListNode
+extract_documentation_py(const FILE *py_file) {}
 
 #endif

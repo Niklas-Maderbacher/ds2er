@@ -1,3 +1,4 @@
+/*
 #ifndef DB_LIST_STRUCT_H
 #define DB_LIST_STRUCT_H
 
@@ -9,3 +10,4 @@ typedef struct DBSingleLinkedListNode {
 } DBSingleLinkedListNode;
 
 #endif
+*/
